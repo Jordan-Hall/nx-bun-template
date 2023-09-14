@@ -6,7 +6,7 @@
   },
   "tasksRunnerOptions": {
     "default": {
-      "runner": "nx/tasks-runners/default",
+      "runner": "@nx-bun/task-worker-runner",
       "options": {
         "cacheableOperations": [
           "build",
@@ -19,5 +19,8 @@
   },
   "workspaceLayout": {
     "projectNameAndRootFormat": "as-provided"
+  },
+  "cli": {
+    "packageManager": "bun"
   }
 }

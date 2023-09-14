@@ -1,0 +1,40 @@
+{
+  "name": "server",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/server/src",
+  "targets": {
+    "build": {
+      "executor": "@nx-bun/nx:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "entrypoints": ["apps/server/src/main.ts"],
+        "outputPath": "dist/server",
+        "tsconfig": "apps/server/tsconfig.app.json",
+        "smol": false,
+        "bun": true
+      }
+    },
+    "serve": {
+      "executor": "@nx-bun/nx:run",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "server:build",
+        "tsconfig": "apps/server/tsconfig.app.json",
+        "watch": true,
+        "hot": true,
+        "bun": true,
+        "smol": false
+      }
+    },
+    "test": {
+      "executor": "@nx-bun/nx:test",
+      "options": {
+        "smol": false,
+        "bail": true,
+        "tsconfig": "apps/server/tsconfig.json",
+        "bun": true
+      }
+    }
+  }
+}

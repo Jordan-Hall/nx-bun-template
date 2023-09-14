@@ -1,15 +1,24 @@
 {
-  "name": ".",
+  "name": "bun-nx-template",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "postinstall": "patch-package",
+    "nx": "bun  ./node_modules/nx/bin/nx.js",
+    "serve": "bun --bun ./node_modules/nx/bin/nx.js",
+    "build": "bunx --bun nx build",
+    "test": "bunx --bun nx test"
+  },
   "private": true,
   "dependencies": {},
   "devDependencies": {
+    "@nx-bun/nx": "^1.0.0",
+    "@nx-bun/task-worker-runner": "^0.0.3",
     "@nx/js": "16.8.1",
-    "nx": "16.8.1"
-  },
-  "workspaces": [
-    "packages/*"
-  ]
+    "bun-types": "latest",
+    "nx": "16.8.1",
+    "patch-package": "^8.0.0",
+    "prettier": "^2.6.2",
+    "typescript": "~5.1.3"
+  }
 }
