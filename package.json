@@ -4,10 +4,10 @@
   "license": "MIT",
   "scripts": {
     "postinstall": "patch-package",
-    "nx": "bun  ./node_modules/nx/bin/nx.js",
-    "serve": "bun --bun ./node_modules/nx/bin/nx.js",
-    "build": "bunx --bun nx build",
-    "test": "bunx --bun nx test"
+    "nx": "bun ./node_modules/nx/bin/nx.js",
+    "serve": "bun ./node_modules/nx/bin/nx.js serve",
+    "build": "bun ./node_modules/nx/bin/nx.js build",
+    "test": "bun ./node_modules/nx/bin/nx.js"
   },
   "private": true,
   "dependencies": {},
