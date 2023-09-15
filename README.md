@@ -1,8 +1,8 @@
-# This is a NX template that works with both BUN 1.0.0 and 1.0.1.
+# This is a NX template that works with both BUN 1.0.2.
 
 By default it uses [@nx-bun/nx](https://github.com/jordan-hall/nx-bun) plugin to create bun apps and libs
 
-Unforuntely these versions of bun has an event loop issue so repo requires to patch the nx library to resolve the issue along with adding bun package manager into NX
+I've added a patch for the nx library to add bun package manager into NX
 
 Currently have two PR solutions for Bun package manager in NX:
 https://github.com/nrwl/nx/issues/15622
